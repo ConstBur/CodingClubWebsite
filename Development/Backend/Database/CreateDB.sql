@@ -1,18 +1,5 @@
---Author: Constantin Buruiana
---Description: Creates the structure of the database for the website.
+USE id8288583_vcc_website;
 
---Before running the script, create a DB owner of the VCC_Website database.
-/*
-connect <username>/<password> --Change this to valid credentials of MySQL admin account
-GRANT ALL PRIVILEGES ON *.* TO 'VCC_DBO'@'localhost' IDENTIFIED BY '<changeme>';
-\q
-*/
-
---Creating database
-CREATE DATABASE VCC_Website;
-USE VCC_Website;
-
---Creating table structure
 CREATE TABLE Users
 (UserId CHAR(23) NOT NULL,
 First VARCHAR(50),
@@ -23,7 +10,7 @@ PRIMARY KEY (UserId));
 CREATE TABLE Accounts
 (AccountId CHAR(23) NOT NULL,
 UserName VARCHAR(64) NOT NULL,
-PasswordHash VARCHAR(64) NOT NULL, --using SHA256
+PasswordHash VARCHAR(64) NOT NULL, 
 UserId CHAR(23),
 PRIMARY KEY (AccountId),
 FOREIGN KEY (UserId) REFERENCES Users(UserId));
@@ -31,7 +18,7 @@ FOREIGN KEY (UserId) REFERENCES Users(UserId));
 CREATE TABLE UserPictures
 (PicId CHAR(23) NOT NULL,
 PicMime VARCHAR(255) NOT NULL,
-PicBlob BLOB NOT NULL, --JPEG or PNG only
+PicBlob BLOB NOT NULL,
 UserId CHAR(23),
 PRIMARY KEY (PicId),
 FOREIGN KEY (UserId) REFERENCES Users(UserId));
