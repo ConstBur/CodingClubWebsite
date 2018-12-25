@@ -1,1 +1,1 @@
-alert("hello, world, and Merry Christmas!")
+alert("Hello World, and Merry Christmas!")
