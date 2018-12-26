@@ -1,0 +1,11 @@
+How to create a remote Amazon AWS Jenkins installation:
+https://d1.awsstatic.com/Projects/P5505030/aws-project_Jenkins-build-server.pdf
+
+How to set up a reverse proxy for Jenkins using Nginx:
+https://wiki.jenkins.io/display/JENKINS/Jenkins+behind+an+NGinX+reverse+proxy
+
+How to set up git-ftp to upload to an FTP server from Jenkins:
+https://www.savjee.be/2016/02/Use-Jenkins-and-git-ftp-to-deploy-website-to-shared-webhosting/
+
+How to configure Jenkins jobs to work with GitHub (webhooks):
+https://support.cloudbees.com/hc/en-us/articles/224543927-GitHub-Integration-Webhooks
