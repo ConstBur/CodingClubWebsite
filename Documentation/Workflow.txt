@@ -1,19 +1,21 @@
 How does the CI/CD (Continuous Integration / Continuous Development) chain work:
 
-I) Clone the created repository from GitHub.
+I) Fork the main repository from GitHub.
   1) Make sure you have git installed (Google "how to install git on <your OS>").
   2) Open the terminal.
   3) cd path/to/project/folder
-  4) git clone <GitHub repo link, available via the "Clone or download" button on the repo root in browser>
+  4) Fork the repo using this guide: https://help.github.com/articles/fork-a-repo/ (needed only once)
+  5) Synchronize the fork for the latest updates using this guide: https://help.github.com/articles/syncing-a-fork/
 
 II) Write your code.
 
 III) Commit and push to GitHub.
   1) cd path/to/project/folder
   2) git add *
-  3) git commit -m "Commit message (describes what you did)."
+  3) git commit -m "Commit message (describes what you did), closes #<issue number>."
   4) git push
-  5) Enter login and password to access the repository.
+  5) Enter login and password to access the forked repo.
+  6) Submit a pull request using this giude: https://help.github.com/articles/creating-a-pull-request-from-a-fork/
 
 IV) GitHub sends a webhook to the remote Jenkins installation on Amazon AWS.
 
